@@ -1,6 +1,6 @@
+from .serializers import CnabSerializer
 from rest_framework import generics
 from .models import Cnab
-from .serializers import CnabSerializer
 
 
 class CnabView(generics.ListCreateAPIView):
