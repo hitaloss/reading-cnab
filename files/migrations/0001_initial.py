@@ -11,7 +11,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name="Cnab",
+            name="File",
             fields=[
                 (
                     "id",
@@ -22,8 +22,14 @@ class Migration(migrations.Migration):
                         verbose_name="ID",
                     ),
                 ),
-                ("title", models.CharField(max_length=30)),
-                ("file", models.FileField(upload_to="documents/")),
+                ("type", models.CharField(max_length=1)),
+                ("date", models.CharField(max_length=8)),
+                ("valor", models.CharField(max_length=10)),
+                ("cpf", models.CharField(max_length=11)),
+                ("card", models.CharField(max_length=11)),
+                ("hour", models.CharField(max_length=6)),
+                ("owner", models.CharField(max_length=14)),
+                ("store_name", models.CharField(max_length=19)),
             ],
         ),
     ]
